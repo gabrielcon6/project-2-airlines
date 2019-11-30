@@ -1,14 +1,14 @@
 // Stage 1
-import React from "react";
+// import React from "react";
 
-const Planes = () => {
-  return <div>Props</div>;
-};
+// const Planes = () => {
+//   return <div>Props</div>;
+// };
 
-export default Planes;
+// export default Planes;
 
 // Final Stage
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 
 const Planes = props => {
@@ -20,7 +20,7 @@ const Planes = props => {
       const myData = response.data;
       setPlanesList(myData);
     });
-  }, [planesList]);
+  }, []);
 
   const myDatabase = planesList.map(s => (
     <Fragment key={s.id}>
@@ -32,7 +32,6 @@ const Planes = props => {
   return (
     <div>
       <ul>{myDatabase}</ul>
-      <div>{props.propsThatImPassingToPlanes}</div>
     </div>
   );
 };

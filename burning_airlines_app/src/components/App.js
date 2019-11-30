@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <p>Hello</p>
-      <Planes propThatImPassingToPlanes={somethingReallyHard} />
+      <Planes />
     </div>
   );
 }
