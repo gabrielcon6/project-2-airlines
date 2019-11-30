@@ -1,0 +1,40 @@
+// Stage 1
+import React from "react";
+
+const Planes = () => {
+  return <div>Props</div>;
+};
+
+export default Planes;
+
+// Final Stage
+import React, { Fragment, useState, useEffect } from "react";
+import axios from "axios";
+
+const Planes = props => {
+  const [planesList, setPlanesList] = useState([]);
+
+  useEffect(() => {
+    const serverURL = `http://localhost:3000/planes.json`;
+    axios.get(serverURL).then(response => {
+      const myData = response.data;
+      setPlanesList(myData);
+    });
+  }, [planesList]);
+
+  const myDatabase = planesList.map(s => (
+    <Fragment key={s.id}>
+      <li> {s.name} </li>
+      <li> {s.created_at} </li>
+    </Fragment>
+  ));
+
+  return (
+    <div>
+      <ul>{myDatabase}</ul>
+      <div>{props.propsThatImPassingToPlanes}</div>
+    </div>
+  );
+};
+
+export default Planes;

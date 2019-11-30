@@ -1,7 +1,7 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 import axios from "axios";
 
-export default class Planes extends React.Component {
+class Planes extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,16 +20,19 @@ export default class Planes extends React.Component {
   }
 
   render() {
-    const myDatabase = this.state.planesList.map((s, id) => (
-      <>
-        <li key={id}> {s.name} </li>
-        <li key={id}> {s.created_at} </li>
-      </>
+    const myDatabase = this.state.planesList.map(s => (
+      <Fragment key={s.id}>
+        <li> {s.name} </li>
+        <li> {s.created_at} </li>
+      </Fragment>
     ));
     return (
       <div>
         <ul>{myDatabase}</ul>
+        <div>{this.props.propThatImPassingToPlanes}</div>
       </div>
     );
   }
 }
+
+export default Planes;
