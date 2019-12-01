@@ -10,10 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_29_221657) do
+ActiveRecord::Schema.define(version: 2019_12_01_230452) do
+
+  create_table "flights", force: :cascade do |t|
+    t.integer "name"
+    t.date "date"
+    t.string "destination"
+    t.string "origin"
+    t.time "time"
+    t.integer "plane_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "planes", force: :cascade do |t|
     t.text "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.string "passenger_name"
+    t.integer "flight_id"
+    t.string "seat_number"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "seats", force: :cascade do |t|
+    t.integer "row"
+    t.integer "column"
+    t.integer "plane_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

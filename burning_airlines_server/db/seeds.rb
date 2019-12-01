@@ -6,4 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Plane.create(name: '747');
+plane_boeing777 = Plane.create(name: 'boeing 777')
+
+seat_boeing777 = Seat.create(row: 10, column: 4, plane_id: plane_boeing777.id)
+
+flight_VA123 = Flight.create(name: 'VA123', date: '2019-12-25', destination: 'SCL', origin: 'SYD', time: '07:00', plane_id: plane_boeing777.id)
+
+gabe = User.create(name: 'Gabe', password_digest: BCrypt::Password.create('gabe'), email: 'gabe@ga.com')
+
+gabe_reservation0 = Reservation.create(passenger_name: 'Gabriel Conceicao', flight_id: flight_VA123.id, seat_number: '1A', user_id: gabe.id)
+
+puts '--------> seed has been planted  <------------'
