@@ -2,7 +2,7 @@ import React from "react";
 import Planes from "./Planes2";
 import Nav from "./Nav";
 import HomePage from "../pages/HomePage";
-import Flights from "../pages/Flights";
+import Airplanes from "../pages/Airplanes";
 import FlightDetails from "../pages/FlightDetails";
 import SearchFlight from "../pages/SearchFlight";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -12,11 +12,12 @@ function App() {
     <Router>
       <div className="App">
         <Nav />
-        <Switch>
-          <Route path="/" component={HomePage} />
-          <Route path="/flights" component={Flights} />
-        </Switch>
-        <p>THIS IS A TITLE FROM APP COMPONENT</p>
+        <switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/airplanes" component={Airplanes} />
+          <Route path="/flights" component={FlightDetails} />
+          <Route path="/search" component={SearchFlight} />
+        </switch>
       </div>
     </Router>
   );
