@@ -31,7 +31,6 @@ const Planes = props => {
 
   return (
     <div>
-      <h1>THIS IS THE RETURN COMPONENT IN PLANE</h1>
       <ul>{myDatabase}</ul>
     </div>
   );
