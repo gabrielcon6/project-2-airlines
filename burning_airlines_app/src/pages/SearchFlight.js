@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { useState, useEffect, Fragment } from "react";
 import axios from "axios";
+import "../styles/search.css";
 
 const SearchFlight = props => {
   const [planesList, setPlanesList, flightsList, setFlightsList] = useState([]);
@@ -25,7 +26,7 @@ const SearchFlight = props => {
     </Fragment>
   ));
 
-  const myDatabase = flightsList.map(flight => (
+  const myFlights = flightsList.map(flight => (
     <Fragment key={flight.id}>
       <li> {flight.name} </li>
       <li> {flight.origin} </li>
