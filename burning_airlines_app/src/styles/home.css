@@ -1,0 +1,29 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("https://i.pinimg.com/originals/f5/24/03/f52403eb67e481fdff32e68ae7a2e448.jpg")
+    no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-text {
+  color: white;
+  margin: 50px;
+}
+
+.home-text h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 5rem;
+  border-bottom: solid 3px white;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.home-text p {
+  font-weight: 200;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}

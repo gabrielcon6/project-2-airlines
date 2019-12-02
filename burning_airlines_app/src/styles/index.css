@@ -2,22 +2,40 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
+  position: fixed;
+  width: 100%;
+  font-weight: bold;
+  background-color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  min-height: 10vh;
-  background: royalblue;
-  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  padding: 10px;
+  margin-left: 40px;
+  color: darkmagenta;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .nav-links {
   width: 50%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   list-style: none;
+  margin-right: 40px;
+  font-weight: 400;
+}
+
+li:hover {
+  color: rgb(109, 107, 107);
+  font-weight: 600;
 }
