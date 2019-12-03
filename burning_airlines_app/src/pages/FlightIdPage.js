@@ -1,13 +1,13 @@
 import React from "react";
-import Flights from "../components/Flights";
+import FlightId from "../components/FlightId";
 
-function FlightsPage() {
+function FlightsIdPage() {
   return (
     <div className="airplanes-list">
       <h1>These are your flight details</h1>
-      <Flights />
+      <FlightsId />
     </div>
   );
 }
 
-export default FlightsPage;
+export default FlightsIdPage;
