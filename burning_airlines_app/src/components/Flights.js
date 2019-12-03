@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 class Flights extends Component {
   constructor(props) {
@@ -23,10 +25,12 @@ class Flights extends Component {
     const myDatabase = this.state.flightsList.map(flight => (
       <>
       <ul key={flight.id}>
+        
         <li> Flight Name: {flight.name} </li>
         <li> Departure: {flight.start_date} </li>
         <li> From: {flight.origin} </li>
         <li> To: {flight.destination} </li>
+        < Link to="/flightId"> More Details </Link> 
       </ul><br />
       </>
     ));
