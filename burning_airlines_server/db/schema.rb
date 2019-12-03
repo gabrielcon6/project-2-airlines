@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_084519) do
+ActiveRecord::Schema.define(version: 2019_12_03_085446) do
 
   create_table "flights", force: :cascade do |t|
     t.string "name"
-    t.date "date"
+    t.date "start_date"
     t.string "destination"
     t.string "origin"
     t.time "time"
