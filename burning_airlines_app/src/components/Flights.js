@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,7 @@ class Flights extends Component {
         <li> Departure: {flight.start_date} </li>
         <li> From: {flight.origin} </li>
         <li> To: {flight.destination} </li>
-        < Link to="/flightId"> More Details </Link> 
+        < Link to={`/flight/${flight.id}`}> More Details </Link> 
       </ul><br />
       </>
     ));

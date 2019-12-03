@@ -1,7 +1,7 @@
 import React from "react";
 import FlightId from "../components/FlightId";
 
-function FlightsIdPage() {
+function FlightIdPage() {
   return (
     <div className="airplanes-list">
       <h1>These are your flight details</h1>
@@ -10,4 +10,4 @@ function FlightsIdPage() {
   );
 }
 
-export default FlightsIdPage;
+export default FlightIdPage;
