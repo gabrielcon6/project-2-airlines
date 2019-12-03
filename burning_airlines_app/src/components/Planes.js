@@ -23,7 +23,6 @@ class Planes extends Component {
     const myDatabase = this.state.planesList.map(s => (
       <Fragment key={s.id}>
         <li> {s.name} </li>
-        <li> {s.created_at} </li>
       </Fragment>
     ));
     return (
