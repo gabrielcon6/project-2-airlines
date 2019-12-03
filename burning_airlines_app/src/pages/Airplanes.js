@@ -1,5 +1,5 @@
 import React from "react";
-import Planes from "../components/Planes2";
+import Planes from "../components/Planes";
 import "../styles/airplanes.css";
 
 function Airplanes() {

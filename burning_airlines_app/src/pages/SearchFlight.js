@@ -4,7 +4,8 @@ import axios from "axios";
 import "../styles/search.css";
 
 const SearchFlight = props => {
-  const [planesList, setPlanesList, flightsList, setFlightsList] = useState([]);
+  const [planesList, setPlanesList] = useState([]);
+  const [flightsList, setFlightsList] = useState([]);
 
   useEffect(() => {
     const serverPlaneURL = `http://localhost:3000/planes.json`;
@@ -15,6 +16,7 @@ const SearchFlight = props => {
     const serverFlightURL = `http://localhost:3000/flights.json`;
     axios.get(serverFlightURL).then(response => {
       const myData = response.data;
+      console.log("myData :", myData);
       setFlightsList(myData);
     });
   }, []);

@@ -1,5 +1,4 @@
 import React from "react";
-import Planes from "./Planes2";
 import Nav from "./Nav";
 import HomePage from "../pages/HomePage";
 import Airplanes from "../pages/Airplanes";
