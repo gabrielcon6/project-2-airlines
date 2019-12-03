@@ -5,7 +5,7 @@ function FlightsIdPage() {
   return (
     <div className="airplanes-list">
       <h1>These are your flight details</h1>
-      <FlightsId />
+      <FlightId />
     </div>
   );
 }
