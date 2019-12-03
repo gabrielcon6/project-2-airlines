@@ -21,12 +21,14 @@ class Flights extends Component {
 
   render() {
     const myDatabase = this.state.flightsList.map(flight => (
-      <Fragment key={flight.id}>
-        <li> key={flight.name} </li>
-        <li> {flight.date} </li>
-        <li> {flight.destination} </li>
-        <li> {flight.origin} </li>
-      </Fragment>
+      <>
+      <ul key={flight.id}>
+        <li> Flight Name: {flight.name} </li>
+        <li> Departure: {flight.start_date} </li>
+        <li> From: {flight.origin} </li>
+        <li> To: {flight.destination} </li>
+      </ul><br />
+      </>
     ));
     return (
       <div>
