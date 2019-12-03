@@ -21,7 +21,7 @@ function Nav() {
         <Link style={navStyle} to="/airplanes">
           <li>Airplanes</li>
         </Link>
-        <Link style={navStyle} to="/flight">
+        <Link style={navStyle} to="/flights">
           <li>Flights</li>
         </Link>
         <Link style={navStyle} to="/search">
