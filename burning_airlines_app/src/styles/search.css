@@ -1,0 +1,64 @@
+.airplanes-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  h1 {
+    margin: 10px;
+  }
+  .search-bar {
+    position: absolute;
+    height: 50%;
+    min-height: 18em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    color: white;
+    background: -webkit-linear-gradient(-65deg, rgb(50, 0, 50), #f96e91, #f7f37e);
+  }
+  h1 {
+    font-weight: 200;
+    font-size: 2.5em;
+    padding: 0.5rem;
+  }
+  button {
+    width: 300px;
+    padding: 7px 124px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: darkmagenta;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    -moz-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+    -webkit-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+  }
+  button:hover {
+    background: rgb(255, 111, 0);
+    box-shadow: none;
+  }
+  input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+  }
+  input:hover {
+    background: white;
+    opacity: 0.5;
+    color: darkmagenta;
+    border: 1px solid darkmagenta;
+  }
+  ::-webkit-input-placeholder {
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: white;
+  }

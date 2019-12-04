@@ -60,17 +60,27 @@ class SearchFlight extends Component {
     console.log(filteredFlights);
     
     return (
-      <Fragment>
-        <h1>Hello</h1>
-        <h1>Hello</h1>
-        <ul>
-          <li>{myPlanes}</li><br />
-          <li>{myFlights}</li><br />
-          <SearchBox searchChange={this.onSearchChange}/>
-          {/* <li>{filteredFlights}</li><br /> */}
-          </ul>
-        <div>{this.props.propThatImPassingToPlanes}</div>
-      </Fragment>
+      <div className="airplanes-list">
+      <div className="search-bar">
+        <h1>Search for your flight</h1>
+        <input type="text" placeholder="Flight Number" />
+        <input type="text" placeholder="Date" />
+        <input type="text" placeholder="Origin" />
+        <input type="text" placeholder="Destination" />
+        <button>Search</button>
+      </div>
+    </div>
+      // <Fragment>
+      //   <h1>Hello</h1>
+      //   <h1>Hello</h1>
+      //   <ul>
+      //     <li>{myPlanes}</li><br />
+      //     <li>{myFlights}</li><br />
+      //     <SearchBox searchChange={this.onSearchChange}/>
+      //     {/* <li>{filteredFlights}</li><br /> */}
+      //     </ul>
+      //   <div>{this.props.propThatImPassingToPlanes}</div>
+      // </Fragment>
     );
   }
 }

@@ -30,7 +30,7 @@ class Flights extends Component {
         <li> Departure: {flight.start_date} </li>
         <li> From: {flight.origin} </li>
         <li> To: {flight.destination} </li>
-        < Link to={`/flight/${flight.id}`}> More Details </Link> 
+        < Link to={`/flights/${flight.id}`}> More Details </Link> 
       </ul><br />
       </>
     ));
