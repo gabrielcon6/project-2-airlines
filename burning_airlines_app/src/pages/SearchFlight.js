@@ -39,8 +39,13 @@ const SearchFlight = props => {
 
   return (
     <div className="search">
-      <h2>this is the Search Component</h2>
-      <ul>{myDatabase}</ul>
+      <h2>this is the Search Component</h2> 
+      <h3> THIS IS NOT SHOWING </h3>
+      <ul>
+      <li>{myDatabase}</li><br />
+      <li>{myFlights}</li> <br />
+      <input type='search' placeholder='search flights'/>
+      </ul>
     </div>
   );
 };
