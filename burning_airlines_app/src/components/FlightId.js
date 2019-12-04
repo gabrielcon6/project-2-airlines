@@ -35,8 +35,8 @@ class FlightId extends Component {
     return   (
       <div>
         <p>>>>>>>Hiiiiii, it will be fixed</p>
-        {/* <ul>{myDatabase}</ul>
-        <div>{this.props.propThatImPassingToflights}</div> */}
+        {/* <ul>{myDatabase}</ul> */}
+        <div>{this.props.propThatImPassingToflights}</div>
       </div>
     );
   }
