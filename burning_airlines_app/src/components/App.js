@@ -17,8 +17,8 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/airplanes" component={Airplanes} />
-          <Route path="/flights" component={FlightsPage} />
-          <Route path="/flight/:flightId" component={FlightIdPage} />
+          <Route path="/flights" exact component={FlightsPage} />
+          <Route path="/flights/:flightId" exact component={FlightIdPage} />
           <Route path="/search" component={SearchFlight} />
         </Switch>
       </div>

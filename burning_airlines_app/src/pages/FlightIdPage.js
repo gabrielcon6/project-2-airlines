@@ -1,13 +1,32 @@
 import React from "react";
 import FlightId from "../components/FlightId";
+import axios from "axios";
 
-function FlightIdPage() {
-  return (
-    <div className="airplanes-list">
-      <h1>These are your flight details</h1>
-      <FlightId />
-    </div>
-  );
+class FlightIdPage extends React.Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+          flightId: this.props.match.params.flightId,
+          thisFlight: {}
+      }
+  }
+  
+  componentDidMount() {
+    const serverURL = `http://localhost:3000/flights/${this.state.flightId}.json`;
+    axios.get(serverURL).then(res => {
+      const myData = res.data;
+      this.setState({
+        thisFlight: myData
+      });
+    });
+  }
+
+  render() {
+      return (<div className="airplanes-list">
+          <FlightId flight={this.state.thisFlight}></FlightId>
+      </div>);
+  }
 }
 
 export default FlightIdPage;

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 class Flights extends Component {
   constructor(props) {
     super(props);
@@ -22,18 +21,14 @@ class Flights extends Component {
   }
 
   render() {
-    const myDatabase = this.state.flightsList.map(flight => (
+    const myDatabase = this.state.flightsList.map((flight, index) => (
       <>
-      <ul key={flight.id}>
-        
-        <li> Flight Name: {flight.name} </li>
-        <li> Departure: {flight.start_date} </li>
-        <li> From: {flight.origin} </li>
-        <li> To: {flight.destination} </li>
-        < Link to={`/flights/${flight.id}`}> More Details </Link> 
+      <ul>
+        <li key={`fli-${index}`}> < Link to={`/flights/${flight.id}`}> Flight Name: {flight.name} </Link> </li> 
       </ul><br />
       </>
     ));
+    
     return (
       <div>
         <ul>{myDatabase}</ul>
