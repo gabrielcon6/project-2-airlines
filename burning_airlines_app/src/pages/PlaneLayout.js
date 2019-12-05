@@ -3,6 +3,10 @@ import "../styles/flightID.css";
 import { Link } from "react-router-dom";
 
 function PlaneLayout() {
+  const seatStyle = {
+    background: rgb(255, 111, 0)
+  };
+
   return (
     <div className="plane-layout">
       <div className="airplane">
