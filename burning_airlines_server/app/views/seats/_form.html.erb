@@ -1,10 +1,10 @@
-<%= form_with(model: plane, local: true) do |form| %>
-  <% if plane.errors.any? %>
+<%= form_with(model: seat, local: true) do |form| %>
+  <% if seat.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(plane.errors.count, "error") %> prohibited this plane from being saved:</h2>
+      <h2><%= pluralize(seat.errors.count, "error") %> prohibited this seat from being saved:</h2>
 
       <ul>
-        <% plane.errors.full_messages.each do |message| %>
+        <% seat.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
