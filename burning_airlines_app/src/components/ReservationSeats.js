@@ -1,6 +1,15 @@
 import React from 'react'
 
 export default class ReservationSeats extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            flightId: this.props.flight_id,
+            thisSeats: [],
+            thisFlight: []
+        }
+    }
+
     createTable = () => {
         let table = []
         let numOfRows = this.props.rows
@@ -25,6 +34,7 @@ export default class ReservationSeats extends React.Component {
             <div className="plane-layout">
                 <div className="airplane">
                     <h1>Please Select Your Seats</h1>
+                    <h2>Flight {this.props.flight_name}</h2>
                         <div className="plane-container">
                             <div className="top-rows">
                             <div className="row"></div>
