@@ -2,21 +2,21 @@
 import React, { Fragment, Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
-import SearchBox from '../components/SearchBox';
+import SearchBox from "../components/SearchBox";
 
 class SearchFlight extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchfield: '',
+      searchfield: "",
       setPlanesList: [],
       setFlightsList: []
     };
   }
 
-  onSeachChange = (event) => {
-    this.setState( {searchfield: event.target.value })
-  }
+  onSeachChange = event => {
+    this.setState({ searchfield: event.target.value });
+  };
 
   componentDidMount() {
     const serverPlaneURL = `http://localhost:3000/planes.json`;
@@ -52,24 +52,25 @@ class SearchFlight extends Component {
       </Fragment>
     ));
 
-    
     const filteredFlights = this.state.setFlightsList.filter(flight => {
-      return flight.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
-    })
-    
+      return flight.name
+        .toLowerCase()
+        .includes(this.state.searchfield.toLowerCase());
+    });
+
     console.log(filteredFlights);
-    
+
     return (
       <div className="airplanes-list">
-      <div className="search-bar">
-        <h1>Search for your flight</h1>
-        <input type="text" placeholder="Flight Number" />
-        <input type="text" placeholder="Date" />
-        <input type="text" placeholder="Origin" />
-        <input type="text" placeholder="Destination" />
-        <button>Search</button>
+        <div className="search-bar">
+          <h1>Search for your flight</h1>
+          <input type="text" placeholder="Flight Number" />
+          <input type="text" placeholder="Date" />
+          <input type="text" placeholder="Origin" />
+          <input type="text" placeholder="Destination" />
+          <button>Search</button>
+        </div>
       </div>
-    </div>
       // <Fragment>
       //   <h1>Hello</h1>
       //   <h1>Hello</h1>
@@ -87,13 +88,10 @@ class SearchFlight extends Component {
 
 export default SearchFlight;
 
-
 // const SearchFlight = props => {
 //   const [planesList, setPlanesList] = useState([]);
 //   const [flightsList, setFlightsList] = useState([]);
 //   const [searchfield, setSearchfield] = useState('');
-
-
 
 //   useEffect(() => {
 //     const serverPlaneURL = `http://localhost:3000/planes.json`;
@@ -125,7 +123,6 @@ export default SearchFlight;
 //     </Fragment>
 //   ));
 
- 
 //   const onSearchChange = (event) => {
 //     console.log(event.target.value);
 //     setSearchfield(event.target.value);
@@ -137,7 +134,7 @@ export default SearchFlight;
 
 //   return (
 //     <div className="search">
-//       <h2>this is the Search Component</h2> 
+//       <h2>this is the Search Component</h2>
 //       <h3> THIS IS NOT SHOWING </h3>
 //       <ul>
 //       <li>{myDatabase}</li><br />

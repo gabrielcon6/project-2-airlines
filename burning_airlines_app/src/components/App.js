@@ -5,6 +5,7 @@ import Airplanes from "../pages/Airplanes";
 import FlightsPage from "../pages/FlightsPage";
 import FlightIdPage from "../pages/FlightIdPage";
 import SearchFlight from "../pages/SearchFlight";
+import PlaneLayout from "../pages/PlaneLayout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // this.props.flightID
@@ -20,6 +21,7 @@ function App() {
           <Route path="/flights" exact component={FlightsPage} />
           <Route path="/flights/:flightId" exact component={FlightIdPage} />
           <Route path="/search" component={SearchFlight} />
+          <Route path="/planeLayout" component={PlaneLayout} />
         </Switch>
       </div>
     </Router>

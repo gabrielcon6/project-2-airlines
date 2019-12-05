@@ -27,6 +27,9 @@ function Nav() {
         <Link style={navStyle} to="/search">
           <li>Search</li>
         </Link>
+        <Link style={navStyle} to="/planeLayout">
+          <li>plane layout</li>
+        </Link>
       </ul>
     </nav>
   );
