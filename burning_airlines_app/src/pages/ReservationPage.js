@@ -13,10 +13,10 @@ this.state = {
 }
 
 componentDidMount() {
-    console.log(this.props.match.params.flightId);
-const serverURL = `http://localhost:3000/flights/${this.state.flightId}/reservation.json`;
+const serverURL = `http://localhost:3000/flights/${this.state.flightId}.json`;
 axios.get(serverURL).then(res => {
 const myData = res.data;
+console.log(myData)
 this.setState({
 thisFlight: myData
 });
@@ -24,8 +24,10 @@ thisFlight: myData
 }
 
 render() {
+    console.log(this.state.thisFlight.plane_id);
 return (<div className="airplanes-list">
-    <p>flight={this.state.thisFlight}></p>
+    <p>fixing it</p>
+    {/* <p>flight={this.state.thisFlight}></p> */}
 </div>);
 }
 }

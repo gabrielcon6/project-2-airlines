@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Plane.destroy_all # Remove every row from the planets table 
+Seat.destroy_all 
+Flight.destroy_all 
+User.destroy_all 
+Reservation.destroy_all 
+
 plane_boeing777 = Plane.create(name: 'boeing 777')
 
 seat_boeing777 = Seat.create(row: 10, column: 4, plane_id: plane_boeing777.id)
