@@ -6,7 +6,7 @@ function HomePage() {
     <div className="home">
       <div className="home-text">
         <h1>Welcome to Burning Airlines</h1>
-        <p>We'll look after you. Just sit back, and relax</p>
+        <p>We'll look after you. Just sit back, and relax.</p>
       </div>
     </div>
   );
