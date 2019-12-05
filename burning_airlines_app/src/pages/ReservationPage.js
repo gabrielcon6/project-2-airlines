@@ -1,34 +1,37 @@
 import React from "react";
-// import Reservation from "../components/Reservation";
+import ReservationSeats from "../components/ReservationSeats";
 import axios from "axios";
 
 class ReservationPage extends React.Component {
 
 constructor(props) {
-super(props);
-this.state = {
-    flightId: this.props.match.params.flightId,
-    thisFlight: {}
-}
+    super(props);
+    this.state = {
+        flightId: [],
+        thisSeats: [],
+    }
 }
 
 componentDidMount() {
-const serverURL = `http://localhost:3000/flights/${this.state.flightId}.json`;
-axios.get(serverURL).then(res => {
-const myData = res.data;
-this.setState({
-myPlane: myData.plane_id
-});
-});
+    const seatsServerURL = `http://localhost:3000/seats/1.json`;
+    axios.get(seatsServerURL).then(res => {
+    const mySeatData = res.data;
+    this.setState({
+        thisSeats: [mySeatData]
+    });
+    });
 }
 
 render() {
-    console.log(this.state.myPlane);
-return (<div className="airplanes-list">
-    <p>fixing it</p>
-    {/* <p>flight={this.state.thisFlight}></p> */}
-</div>);
-}
+    const numRows = this.state.thisSeats.map(s =>  s.row)
+    const numCols = this.state.thisSeats.map(s =>  s.column)
+
+    return (
+            <div className="airplanes-list">
+                <ReservationSeats rows={numRows} cols={numCols}/>
+            </div>
+    );
+  }
 }
 
 //form passenger_name
@@ -37,3 +40,4 @@ return (<div className="airplanes-list">
 //fetch axios 
 
 export default ReservationPage;
+
