@@ -1,7 +1,7 @@
-import React, { Fragment, Component } from "react";
+import React, {  Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
-import SearchBox from "../components/SearchBox";
+// import SearchBox from "../components/SearchBox";
 
 class SearchFlight extends Component {
   constructor(props) {
@@ -36,20 +36,20 @@ class SearchFlight extends Component {
   }
 
   render() {
-    const myPlanes = this.state.setPlanesList.map(plane => (
-      <Fragment key={plane.id}>
-        <li> {plane.name} </li>
-      </Fragment>
-    ));
+    // const myPlanes = this.state.setPlanesList.map(plane => (
+    //   <Fragment key={plane.id}>
+    //     <li> {plane.name} </li>
+    //   </Fragment>
+    // ));
 
-    const myFlights = this.state.setFlightsList.map(flight => (
-      <Fragment key={flight.id}>
-        <li> {flight.name} </li>
-        <li> {flight.start_date} </li>
-        <li> {flight.origin} </li>
-        <li> {flight.destination} </li>
-      </Fragment>
-    ));
+    // const myFlights = this.state.setFlightsList.map(flight => (
+    //   <Fragment key={flight.id}>
+    //     <li> {flight.name} </li>
+    //     <li> {flight.start_date} </li>
+    //     <li> {flight.origin} </li>
+    //     <li> {flight.destination} </li>
+    //   </Fragment>
+    // ));
 
     const filteredFlights = this.state.setFlightsList.filter(flight => {
       return flight.name

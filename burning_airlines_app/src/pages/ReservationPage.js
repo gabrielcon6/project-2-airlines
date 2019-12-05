@@ -7,18 +7,29 @@ class ReservationPage extends React.Component {
 constructor(props) {
     super(props);
     this.state = {
-        flightId: [],
+        flightId: this.props.match.params.flightId,
         thisSeats: [],
+        thisFlight: []
     }
 }
 
 componentDidMount() {
     const seatsServerURL = `http://localhost:3000/seats/1.json`;
     axios.get(seatsServerURL).then(res => {
-    const mySeatData = res.data;
-    this.setState({
-        thisSeats: [mySeatData]
+        const mySeatData = res.data;
+        this.setState({
+            thisSeats: [mySeatData]
+        });
     });
+
+    const flightsServerURL = `http://localhost:3000/flights/${this.state.flightId}.json`;
+    console.log(flightsServerURL)
+    axios.get(flightsServerURL).then(res => {
+        const myFlightData = res.data;
+        console.log(myFlightData);
+        this.setState({
+            thisFlight: myFlightData
+        });
     });
 }
 
@@ -28,7 +39,7 @@ render() {
 
     return (
             <div className="airplanes-list">
-                <ReservationSeats rows={numRows} cols={numCols}/>
+                <ReservationSeats rows={numRows} cols={numCols} flight_id={this.state.flightId} flight_name={this.state.thisFlight.name}/>
             </div>
     );
   }
