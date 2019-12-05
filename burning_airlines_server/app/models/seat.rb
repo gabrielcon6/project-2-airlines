@@ -1,3 +1,3 @@
 class Seat < ApplicationRecord
-    belongs_to :plane
+    has_one :plane
 end

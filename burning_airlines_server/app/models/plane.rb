@@ -1,4 +1,4 @@
 class Plane < ApplicationRecord
     has_many :flights
-    has_one :seat
+    belongs_to :seat
 end

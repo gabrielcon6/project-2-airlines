@@ -16,20 +16,24 @@ componentDidMount() {
 const serverURL = `http://localhost:3000/flights/${this.state.flightId}.json`;
 axios.get(serverURL).then(res => {
 const myData = res.data;
-console.log(myData)
 this.setState({
-thisFlight: myData
+myPlane: myData.plane_id
 });
 });
 }
 
 render() {
-    console.log(this.state.thisFlight.plane_id);
+    console.log(this.state.myPlane);
 return (<div className="airplanes-list">
     <p>fixing it</p>
     {/* <p>flight={this.state.thisFlight}></p> */}
 </div>);
 }
 }
+
+//form passenger_name
+//on change event in the input field
+//callbackfunction updating data and state **as the user types**
+//fetch axios 
 
 export default ReservationPage;
