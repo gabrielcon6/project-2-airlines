@@ -1,4 +1,3 @@
-// import React from "react";
 import React, { Fragment, Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
@@ -68,20 +67,9 @@ class SearchFlight extends Component {
           <input type="text" placeholder="Date" />
           <input type="text" placeholder="Origin" />
           <input type="text" placeholder="Destination" />
-          <button>Search</button>
+          <button className="search-button">Search</button>
         </div>
       </div>
-      // <Fragment>
-      //   <h1>Hello</h1>
-      //   <h1>Hello</h1>
-      //   <ul>
-      //     <li>{myPlanes}</li><br />
-      //     <li>{myFlights}</li><br />
-      //     <SearchBox searchChange={this.onSearchChange}/>
-      //     {/* <li>{filteredFlights}</li><br /> */}
-      //     </ul>
-      //   <div>{this.props.propThatImPassingToPlanes}</div>
-      // </Fragment>
     );
   }
 }
