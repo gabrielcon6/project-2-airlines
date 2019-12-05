@@ -5,7 +5,7 @@ import "../styles/airplanes.css";
 function Airplanes() {
   return (
     <div className="airplanes-list">
-      <h2>These are our planes</h2>
+      <h2>These are our aircrafts</h2>
       <Planes />
     </div>
   );

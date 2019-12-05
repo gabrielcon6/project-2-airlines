@@ -19,7 +19,7 @@ function Nav() {
           <li>Home</li>
         </Link>
         <Link style={navStyle} to="/airplanes">
-          <li>Airplanes</li>
+          <li>Aircrafts</li>
         </Link>
         <Link style={navStyle} to="/flights">
           <li>Flights</li>

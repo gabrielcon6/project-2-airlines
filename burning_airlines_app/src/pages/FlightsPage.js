@@ -4,7 +4,7 @@ import Flights from "../components/Flights";
 function FlightsPage() {
   return (
     <div className="airplanes-list">
-      <h1>These are your flight details</h1>
+      <h2>These are our flights:</h2>
       <Flights />
     </div>
   );

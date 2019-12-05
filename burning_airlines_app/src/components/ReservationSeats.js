@@ -11,7 +11,7 @@ export default class ReservationSeats extends React.Component {
         let children = []
         //Inner loop to create children
         for (let j = 0; j < numOfRows; j++) {
-            children.push(<td>{`Column ${j + 1}`}</td>)
+            children.push(<td><button className="seat-button">{`${j + 1}`}</button></td>)
         }
         //Create the parent and add the children
         table.push(<tr>{children}</tr>)
@@ -22,10 +22,22 @@ export default class ReservationSeats extends React.Component {
   render() {
     return(
         <div>
-            <table>
-                {this.createTable()}
-            </table>
-      </div>
+            <div className="plane-layout">
+                <div className="airplane">
+                    <h1>Please Select Your Seats</h1>
+                        <div className="plane-container">
+                            <div className="top-rows">
+                            <div className="row"></div>
+                                {/* <table> */}
+                                {this.createTable()}
+                                {/* </table> */}
+                        </div>
+                    </div>
+                            <button className="available">Available</button>
+                            <button className="unavailable">Unavaible</button>
+                </div>
+            </div>
+        </div>
     )
   }
 
