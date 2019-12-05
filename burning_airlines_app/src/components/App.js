@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage";
 import Airplanes from "../pages/Airplanes";
 import FlightsPage from "../pages/FlightsPage";
 import FlightIdPage from "../pages/FlightIdPage";
+import ReservationPage from "../pages/ReservationPage";
 import SearchFlight from "../pages/SearchFlight";
 import PlaneLayout from "../pages/PlaneLayout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/airplanes" component={Airplanes} />
           <Route path="/flights" exact component={FlightsPage} />
           <Route path="/flights/:flightId" exact component={FlightIdPage} />
+          <Route path="/flights/:flightId/reservation" exact component={ReservationPage} />
           <Route path="/search" component={SearchFlight} />
           <Route path="/planeLayout" component={PlaneLayout} />
         </Switch>

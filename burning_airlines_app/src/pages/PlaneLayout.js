@@ -34,7 +34,6 @@ function PlaneLayout() {
               <button className="seat-button">B1</button>
             </div>
           </div>
-
           <div className="bottom-rows">
             <div className="row">
               <button className="seat-button">C10</button>
@@ -63,7 +62,8 @@ function PlaneLayout() {
           </div>
         </div>
         <div className="row">
-          <button className="seat-icons">D10</button>
+          <button className="seat-button1">Unavaible</button>
+          <button className="seat-button2">Available</button>
         </div>
       </div>
     </div>

@@ -4,7 +4,6 @@
   align-items: center;
   height: 100vh;
 }
-
 .airplane {
   position: absolute;
   height: 65%;
@@ -22,11 +21,9 @@
   padding: 20px;
   border-radius: 20px;
 }
-
 .top-rows {
   margin-bottom: 2.5rem;
 }
-
 .seat-button {
   text-align: center;
   width: 40px;
@@ -46,4 +43,33 @@
 .seat-button:hover {
   background: rgb(255, 111, 0);
   box-shadow: none;
+}
+.seating-icon {
+  display: inline-block;
+}
+.seat-button1 {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  margin: 5px 100px;
+  border-radius: 5px;
+  background: rgb(255, 111, 0);
+  border: 1px solid white;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+.seat-button2 {
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  margin: 5px 100px;
+  border-radius: 5px;
+  background: darkmagenta;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 200;
+  text-decoration: none;
 }
