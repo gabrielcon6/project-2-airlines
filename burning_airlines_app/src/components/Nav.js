@@ -24,12 +24,6 @@ function Nav() {
         <Link style={navStyle} to="/flights">
           <li>Flights</li>
         </Link>
-        <Link style={navStyle} to="/search">
-          <li>Search</li>
-        </Link>
-        <Link style={navStyle} to="/planeLayout">
-          <li>plane layout</li>
-        </Link>
         <Link style={navStyle} to="/makeBooking">
           <li>Make a Booking</li>
         </Link>

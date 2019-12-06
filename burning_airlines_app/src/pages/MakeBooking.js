@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
-// import SearchBox from "../components/SearchBox";
+import { Link } from "react-router-dom";
 
 class MakeBooking extends Component {
   constructor(props) {
@@ -40,12 +40,15 @@ class MakeBooking extends Component {
       <div className="airplanes-list">
         <div className="search-bar">
           <h1>Make A Booking Or Search For Your Flight</h1>
+          <input type="text" placeholder="Full Name" />
           <input type="text" placeholder="Flight Number" />
-          <input type="date" placeholder="Date" />
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+          <input type="date" placeholder="From" />
+          <input type="date" placeholder="To" />
           <div className="seating-icon ">
-            <button className="booking-button">Book</button>
+            <Link to="/planeLayout">
+              <button className="booking-button">Book</button>
+            </Link>
+
             <button className="booking-button">Search</button>
           </div>
         </div>

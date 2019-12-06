@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/flightID.css";
-import { Link } from "react-router-dom";
 
 class PlaneLayout extends React.Component {
   state = {
