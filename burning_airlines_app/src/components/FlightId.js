@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 class FlightId extends Component {
   render() {
     return   (
-      <div>
+      <div className="airplanes-list">
+                <div className="search-bar">
         {/* /*WE NEED TO ADD A KEY FOR THIS UL*/ }
         <ul> 
         <li>Flight Number: {this.props.flight.name}</li>
@@ -13,6 +14,7 @@ class FlightId extends Component {
         <li>Date: {this.props.flight.start_date}</li>
         <li> < Link to={`/flights/${this.props.flight.id}/reservation`}> Book a Seat </Link> </li> 
         </ul>
+        </div>
       </div>
     );
   }

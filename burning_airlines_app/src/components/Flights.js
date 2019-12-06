@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "../styles/search.css";
 
 class Flights extends Component {
   constructor(props) {
@@ -30,9 +31,9 @@ class Flights extends Component {
     ));
     
     return (
-      <div>
-        <ul>{myDatabase}</ul>
-        <div>{this.props.propThatImPassingToflights}</div>
+      <div className="search-bar">
+      <h1>Our Available Flights:</h1>
+      <ul>{myDatabase}</ul>
       </div>
     );
   }

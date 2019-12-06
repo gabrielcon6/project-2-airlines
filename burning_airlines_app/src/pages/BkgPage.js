@@ -33,6 +33,7 @@ export default class BkgPage extends Component {
     render () {
         return (
             <div className="airplanes-list">
+            <div className="search-bar">
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Passenger Name:<br />
@@ -42,10 +43,11 @@ export default class BkgPage extends Component {
                     Seat Number:<br />
                     <input type="text" value="2C" readOnly /><br />
                     Date:<br />
-                    <input type="integer" value="20/12/2019" readOnly /><br />
+                    <input type="integer" value="20/12/2019" readOnly /><br /><br />
                 </label>
-                <button type="submit">Add</button>
+                <button type="submit" className="booking-button">Add</button>
             </form>
+            </div>
             </div>
         )
     }

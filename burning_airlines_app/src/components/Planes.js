@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
+import "../styles/search.css";
+
 
 class Planes extends Component {
   constructor(props) {
