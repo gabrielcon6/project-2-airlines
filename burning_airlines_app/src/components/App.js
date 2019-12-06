@@ -11,8 +11,6 @@ import MakeBooking from "../pages/MakeBooking";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BkgPage from "../pages/BkgPage";
 
-// this.props.flightID
-
 function App() {
   return (
     <Router>

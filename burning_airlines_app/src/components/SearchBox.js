@@ -1,3 +1,8 @@
+
+
+//NOT BEING USED AT THE MOMENT - FEATURE TO BE IMPLEMENTED
+
+
 import React from 'react';
 
 const SearchBox = ( { searchfield, searchChange }) => {

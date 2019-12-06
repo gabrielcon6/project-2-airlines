@@ -33,21 +33,24 @@ export default class BkgPage extends Component {
     render () {
         return (
             <div className="airplanes-list">
-            <div className="search-bar">
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    Passenger Name:<br />
-                    <input type="text" passenger_name="passenger_name" onChange={this.handleChange}/><br />
-                    Flight Number:<br />
-                    <input type="integer" value="VA123" readOnly /><br />
-                    Seat Number:<br />
-                    <input type="text" value="2C" readOnly /><br />
-                    Date:<br />
-                    <input type="integer" value="20/12/2019" readOnly /><br /><br />
-                </label>
-                <button type="submit" className="booking-button">Add</button>
-            </form>
-            </div>
+                <div className="search-bar">
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Passenger Name:<br />
+                            <input type="text" passenger_name="passenger_name" onChange={this.handleChange}/><br />
+                            
+                            Flight Number:<br />
+                            <input type="integer" value="VA123" readOnly /><br />
+                            
+                            Seat Number:<br />
+                            <input type="text" value="2C" readOnly /><br />
+                            
+                            Date:<br />
+                            <input type="integer" value="20/12/2019" readOnly /><br /><br />
+                        </label>
+                        <button type="submit" className="booking-button">Add</button>
+                    </form>
+                </div>
             </div>
         )
     }

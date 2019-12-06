@@ -24,16 +24,16 @@ class Flights extends Component {
   render() {
     const myDatabase = this.state.flightsList.map((flight, index) => (
       <>
-      <ul>
-        <li key={`fli-${index}`}> < Link to={`/flights/${flight.id}`}> Flight Name: {flight.name} </Link> </li> 
-      </ul><br />
+        <ul>
+          <li key={`fli-${index}`}> < Link to={`/flights/${flight.id}`}> Flight Name: {flight.name} </Link> </li> 
+        </ul><br />
       </>
     ));
     
     return (
       <div className="search-bar">
-      <h1>Our Available Flights:</h1>
-      <ul>{myDatabase}</ul>
+        <h1>Our Available Flights:</h1>
+        <ul>{myDatabase}</ul>
       </div>
     );
   }

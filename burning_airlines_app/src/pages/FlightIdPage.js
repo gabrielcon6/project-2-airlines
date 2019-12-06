@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import FlightId from "../components/FlightId";
 import axios from "axios";
 
-class FlightIdPage extends React.Component {
+class FlightIdPage extends Component {
 
   constructor(props) {
       super(props);
@@ -23,8 +23,9 @@ class FlightIdPage extends React.Component {
   }
 
   render() {
-      return (<div className="airplanes-list">
-          <FlightId flight={this.state.thisFlight}></FlightId>
+      return (
+      <div className="airplanes-list">
+        <FlightId flight={this.state.thisFlight} />
       </div>);
   }
 }

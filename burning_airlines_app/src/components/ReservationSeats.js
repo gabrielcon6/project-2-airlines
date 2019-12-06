@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default class ReservationSeats extends React.Component {
+export default class ReservationSeats extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,6 @@ export default class ReservationSeats extends React.Component {
 
   clickHandler = () => {
     console.log("Clicked");
-    // children.push()
     return <td>"Book"</td>;
   };
 
@@ -31,8 +30,6 @@ export default class ReservationSeats extends React.Component {
             <button
               className="seat-button"
               onClick={this.clickHandler}
-              data-toggle="modal"
-              data-target="#exampleModal"
             >{`${j + 1}`}</button>
           </td>
         );

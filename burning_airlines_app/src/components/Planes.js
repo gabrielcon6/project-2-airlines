@@ -3,7 +3,7 @@ import axios from "axios";
 import "../styles/search.css";
 
 
-class Planes extends Component {
+export default class Planes extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,5 +35,3 @@ class Planes extends Component {
     );
   }
 }
-
-export default Planes;

@@ -45,7 +45,7 @@ class MakeBooking extends Component {
           <input type="date" placeholder="From" />
           <input type="date" placeholder="To" />
           <div className="seating-icon ">
-            <Link to="/planeLayout">
+            <Link to="/planeLayout" style={{ textDecoration: 'none' }}>
               <button className="booking-button">Book</button>
             </Link>
 
