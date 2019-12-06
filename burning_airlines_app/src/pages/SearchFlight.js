@@ -3,7 +3,7 @@ import axios from "axios";
 import "../styles/search.css";
 // import SearchBox from "../components/SearchBox";
 
-class SearchFlight extends Component {
+export default class SearchFlight extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -73,5 +73,3 @@ class SearchFlight extends Component {
     );
   }
 }
-
-export default SearchFlight;

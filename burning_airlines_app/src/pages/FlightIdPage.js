@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import FlightId from "../components/FlightId";
 import axios from "axios";
 
-class FlightIdPage extends Component {
+export default class FlightIdPage extends Component {
 
   constructor(props) {
       super(props);
@@ -29,5 +29,3 @@ class FlightIdPage extends Component {
       </div>);
   }
 }
-
-export default FlightIdPage;

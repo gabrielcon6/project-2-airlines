@@ -3,7 +3,7 @@ import axios from "axios";
 import "../styles/search.css";
 import { Link } from "react-router-dom";
 
-class MakeBooking extends Component {
+export default class MakeBooking extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,8 @@ class MakeBooking extends Component {
   }
 }
 
-export default MakeBooking;
+
+// FIRST VERSION MADE BY LILLIAN
 
 // const SearchFlight = props => {
 //   const [planesList, setPlanesList] = useState([]);

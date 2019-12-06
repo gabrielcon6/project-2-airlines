@@ -2,7 +2,7 @@ import React from "react";
 import ReservationSeats from "../components/ReservationSeats";
 import axios from "axios";
 
-class ReservationPage extends React.Component {
+export default class ReservationPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,10 +58,3 @@ class ReservationPage extends React.Component {
     );
   }
 }
-
-//form passenger_name
-//on change event in the input field
-//callbackfunction updating data and state **as the user types**
-//fetch axios
-
-export default ReservationPage;
