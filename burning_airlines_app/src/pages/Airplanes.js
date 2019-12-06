@@ -1,6 +1,5 @@
 import React from "react";
 import Planes from "../components/Planes";
-import "../styles/search.css";
 
 function Airplanes() {
   return (

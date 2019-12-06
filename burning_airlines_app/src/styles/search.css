@@ -19,10 +19,6 @@
   background: -webkit-linear-gradient(-65deg, rgb(50, 0, 50), #f96e91, #f7f37e);
 }
 
-h1 {
-  font-weight: 200;
-  font-size: 1.75rem;
-}
 .booking-button {
   display: inline;
   height: 30px;
@@ -73,4 +69,25 @@ textarea {
   font-weight: 200;
   letter-spacing: 1px;
   color: white;
+}
+
+.flights-button {
+  display: inline;
+  height: 30px;
+  width: 300px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  background: darkmagenta;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  -moz-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+  box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
+}
+.flights-button:hover {
+  background: rgb(255, 111, 0);
+  box-shadow: none;
 }

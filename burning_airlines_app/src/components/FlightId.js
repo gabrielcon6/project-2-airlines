@@ -3,16 +3,22 @@ import { Link } from "react-router-dom";
 
 class FlightId extends Component {
   render() {
-    return   (
+    return (
       <div className="airplanes-list">
-                <div className="search-bar">
-        {/* /*WE NEED TO ADD A KEY FOR THIS UL*/ }
-          <ul> 
+        <div className="search-bar">
+          {/* /*WE NEED TO ADD A KEY FOR THIS UL*/}
+          <ul>
             <li>Flight Number: {this.props.flight.name}</li>
             <li>From: {this.props.flight.origin}</li>
             <li>To: {this.props.flight.destination}</li>
-            <li>Date: {this.props.flight.start_date}</li><br />
-            <li> < Link to={`/flights/${this.props.flight.id}/reservation`}> Book a Seat </Link> </li> 
+            <li>Date: {this.props.flight.start_date}</li>
+            <br />
+            <button className="booking-button">
+              <Link to={`/flights/${this.props.flight.id}/reservation`}>
+                {" "}
+                Book a Seat{" "}
+              </Link>
+            </button>
           </ul>
         </div>
       </div>

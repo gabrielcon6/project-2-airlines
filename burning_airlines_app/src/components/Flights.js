@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../styles/search.css";
+import Planes from "../components/Planes";
 
 class Flights extends Component {
   constructor(props) {
@@ -22,18 +23,30 @@ class Flights extends Component {
   }
 
   render() {
-    const myDatabase = this.state.flightsList.map((flight, index) => (
+    const myListOfFlights = this.state.flightsList.map((flight, index) => (
       <>
-        <ul>
-          <li key={`fli-${index}`}> < Link to={`/flights/${flight.id}`}> Flight Name: {flight.name} </Link> </li> 
-        </ul><br />
+        <button className="flights-button" key={`fli-${index}`}>
+          {" "}
+          <Link to={`/flights/${flight.id}`}>
+            {" "}
+            Flight Name: {flight.name}{" "}
+          </Link>{" "}
+        </button>
+        <br />
       </>
     ));
-    
+
     return (
       <div className="search-bar">
-        <h1>Our Available Flights:</h1>
-        <ul>{myDatabase}</ul>
+        <div className="airplanes-list">
+          <div className="search-bar"></div>
+          <h1>Please Choose From One Of Our Available</h1>
+          <div>{myListOfFlights}</div>
+        </div>
+        <div className="airplanes-list">
+          <h1>These are our aircrafts</h1>
+          <Planes />
+        </div>
       </div>
     );
   }

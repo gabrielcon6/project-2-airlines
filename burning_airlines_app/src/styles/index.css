@@ -35,7 +35,12 @@ nav {
   font-weight: 400;
 }
 
-li:hover {
-  color: rgb(109, 107, 107);
-  font-weight: 600;
+h1 {
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
