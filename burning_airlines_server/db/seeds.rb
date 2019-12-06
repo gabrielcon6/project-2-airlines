@@ -14,7 +14,9 @@ Reservation.destroy_all
 
 seat_boeing777 = Seat.create(row: 10, column: 4)
 
-plane_boeing777 = Plane.create(name: 'boeing 777', seat_id: seat_boeing777.id)
+plane_boeing777 = Plane.create(name: 'Boeing 777', seat_id: seat_boeing777.id)
+plane_boeing747 = Plane.create(name: 'Boeing 747', seat_id: seat_boeing777.id)
+plane_airbusA300 = Plane.create(name: 'Airbus A300', seat_id: seat_boeing777.id)
 
 flight_VA123 = Flight.create(name: 'VA123', start_date: '2019-12-25', destination: 'SCL', origin: 'SYD', time: '07:00', plane_id: plane_boeing777.id)
 
