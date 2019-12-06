@@ -39,7 +39,6 @@ class Flights extends Component {
     return (
       <div className="search-bar">
         <div className="airplanes-list">
-          <div className="search-bar"></div>
           <h1>Please Choose From One Of Our Available</h1>
           <div>{myListOfFlights}</div>
         </div>
