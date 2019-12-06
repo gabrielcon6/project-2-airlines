@@ -1,6 +1,6 @@
 import React from "react";
 import ReservationSeats from "../components/ReservationSeats";
-import axios, { sleeper } from "axios";
+import axios from "axios";
 
 class ReservationPage extends React.Component {
   constructor(props) {
