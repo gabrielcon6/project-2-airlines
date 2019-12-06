@@ -22,4 +22,12 @@ gabe = User.create(name: 'Gabe', password_digest: BCrypt::Password.create('gabe'
 
 gabe_reservation0 = Reservation.create(passenger_name: 'Gabriel Conceicao', flight_id: flight_VA123.id, seat_number: '1A', user_id: gabe.id)
 
+
+flight_VA125 = Flight.create(name: 'VA125', start_date: '2019-12-25', destination: 'SAO', origin: 'SYD', time: '09:00', plane_id: plane_boeing777.id)
+
+
+gabe_reservation0 = Reservation.create(passenger_name: 'Gabriel Conceicao', flight_id: flight_VA123.id, seat_number: '1A', user_id: gabe.id)
+
+gabe_reservation1 = Reservation.create(passenger_name: 'Lillian Luzinsky', flight_id: flight_VA125.id, seat_number: '1A', user_id: gabe.id)
+
 puts '--------> seed has been planted  <------------'
