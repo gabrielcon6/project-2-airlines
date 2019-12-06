@@ -1,4 +1,4 @@
-import React, {  Component } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
 // import SearchBox from "../components/SearchBox";
@@ -36,16 +36,18 @@ class MakeBooking extends Component {
   }
 
   render() {
-
     return (
       <div className="airplanes-list">
         <div className="search-bar">
-          <h1>Book this Flight</h1>
+          <h1>Make A Booking Or Search For Your Flight</h1>
           <input type="text" placeholder="Flight Number" />
           <input type="date" placeholder="Date" />
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
-          <button className="search-button">Book</button>
+          <div className="seating-icon ">
+            <button className="booking-button">Book</button>
+            <button className="booking-button">Search</button>
+          </div>
         </div>
       </div>
     );

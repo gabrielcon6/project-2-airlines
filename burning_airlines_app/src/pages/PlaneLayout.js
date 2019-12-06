@@ -2,72 +2,90 @@ import React from "react";
 import "../styles/flightID.css";
 import { Link } from "react-router-dom";
 
-function PlaneLayout() {
-  return (
-    <div className="plane-layout">
-      <div className="airplane">
-        <h1>Please Select Your Seats</h1>
-        <div className="plane-container">
-          <div className="top-rows">
-            <div className="row">
-              <button className="seat-button">A10</button>
-              <button className="seat-button">A9</button>
-              <button className="seat-button">A8</button>
-              <button className="seat-button">A7</button>
-              <button className="seat-button">A6</button>
-              <button className="seat-button">A5</button>
-              <button className="seat-button">A4</button>
-              <button className="seat-button">A3</button>
-              <button className="seat-button">A2</button>
-              <button className="seat-button">A1</button>
+class PlaneLayout extends React.Component {
+  state = {
+    toggle: false,
+    selectedSeat: undefined
+  };
+
+  onToggle = event => {
+    const selectedSeat = event.target.textContent;
+
+    this.setState({
+      toggle: !this.state.toggle,
+      selectedSeat: selectedSeat
+    });
+  };
+  render() {
+    const seatMap1 = [
+      ["A10", "A9", "A8", "A7", "A6", "A5", "A4", "A3", "A2", "A1"],
+      ["B10", "B9", "B8", "B7", "B6", "B5", "B4", "B3", "B2", "B1"]
+    ];
+
+    const seatMap2 = [
+      ["C10", "C9", "C8", "C7", "C6", "C5", "C4", "C3", "C2", "C1"],
+      ["D10", "D9", "D8", "D7", "D6", "D5", "D4", "D3", "D2", "D1"]
+    ];
+    const TopSeatMapRows = [];
+    const BottomSeatMapRows = [];
+
+    for (const row of seatMap1) {
+      TopSeatMapRows.push(
+        row.map(topSeats => (
+          <button
+            onClick={this.onToggle}
+            className={
+              this.state.selectedSeat === topSeats
+                ? "orange-seat"
+                : "seat-button"
+            }
+          >
+            {topSeats}
+          </button>
+        ))
+      );
+    }
+    for (const row of seatMap2) {
+      BottomSeatMapRows.push(
+        row.map(bottomSeats => (
+          <button
+            onClick={this.onToggle}
+            className={
+              this.state.selectedSeat === bottomSeats
+                ? "orange-seat"
+                : "seat-button"
+            }
+          >
+            {bottomSeats}
+          </button>
+        ))
+      );
+    }
+    console.log(TopSeatMapRows);
+    return (
+      <div className="plane-layout">
+        <div className="airplane">
+          <h1>Please Select Your Seats</h1>
+          <div className="plane-container">
+            <div className="top-rows">
+              {TopSeatMapRows.map(rows => {
+                return <div className="row">{rows.map(seat => seat)}</div>;
+              })}
             </div>
             <div className="row">
-              <button className="seat-button">B10</button>
-              <button className="seat-button">B9</button>
-              <button className="seat-button">B8</button>
-              <button className="seat-button">B7</button>
-              <button className="seat-button">B6</button>
-              <button className="seat-button">B5</button>
-              <button className="seat-button">B4</button>
-              <button className="seat-button">B3</button>
-              <button className="seat-button">B2</button>
-              <button className="seat-button">B1</button>
+              {BottomSeatMapRows.map(rows => {
+                return <div className="row">{rows.map(seat => seat)}</div>;
+              })}
             </div>
           </div>
-          <div className="bottom-rows">
-            <div className="row">
-              <button className="seat-button">C10</button>
-              <button className="seat-button">C9</button>
-              <button className="seat-button">C8</button>
-              <button className="seat-button">C7</button>
-              <button className="seat-button">C6</button>
-              <button className="seat-button">C5</button>
-              <button className="seat-button">C4</button>
-              <button className="seat-button">C3</button>
-              <button className="seat-button">C2</button>
-              <button className="seat-button">C1</button>
-            </div>
-            <div className="row">
-              <button className="seat-button">D10</button>
-              <button className="seat-button">D9</button>
-              <button className="seat-button">D8</button>
-              <button className="seat-button">D7</button>
-              <button className="seat-button">D6</button>
-              <button className="seat-button">D5</button>
-              <button className="seat-button">D4</button>
-              <button className="seat-button">D3</button>
-              <button className="seat-button">D2</button>
-              <button className="seat-button">D1</button>
-            </div>
+          <div className="row">
+            <button className="unavailable">Unavaible</button>
+            <button className="available">Available</button>
           </div>
-        </div>
-        <div className="row">
-          <button className="unavailable">Unavaible</button>
-          <button className="available">Available</button>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default PlaneLayout;

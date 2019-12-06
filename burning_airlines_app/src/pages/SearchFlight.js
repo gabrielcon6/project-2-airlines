@@ -1,4 +1,4 @@
-import React, {  Component } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import "../styles/search.css";
 // import SearchBox from "../components/SearchBox";
@@ -75,62 +75,3 @@ class SearchFlight extends Component {
 }
 
 export default SearchFlight;
-
-// const SearchFlight = props => {
-//   const [planesList, setPlanesList] = useState([]);
-//   const [flightsList, setFlightsList] = useState([]);
-//   const [searchfield, setSearchfield] = useState('');
-
-//   useEffect(() => {
-//     const serverPlaneURL = `http://localhost:3000/planes.json`;
-//     axios.get(serverPlaneURL).then(response => {
-//       const myData = response.data;
-//       setPlanesList(myData);
-//     });
-//     const serverFlightURL = `http://localhost:3000/flights.json`;
-//     axios.get(serverFlightURL).then(response => {
-//       const myData = response.data;
-//       console.log("myData :", myData);
-//       setFlightsList(myData);
-//     });
-//   }, []);
-
-//   const myDatabase = planesList.map(planes => (
-//     <Fragment key={planes.id}>
-//       <li> {planes.name} </li>
-//       <li> {planes.created_at} </li>
-//     </Fragment>
-//   ));
-
-//   const myFlights = flightsList.map(flight => (
-//     <Fragment key={flight.id}>
-//       <li> {flight.name} </li>
-//       <li> {flight.origin} </li>
-//       <li> {flight.destination} </li>
-//       <li> {flight.created_at} </li>
-//     </Fragment>
-//   ));
-
-//   const onSearchChange = (event) => {
-//     console.log(event.target.value);
-//     setSearchfield(event.target.value);
-//     const filteredFlights = planesList.filter(flights => {
-//       return planesList.name.toLowerCase().includes(searchfield.toLowerCase());
-//     })
-//     console.log(filteredFlights);
-//   }
-
-//   return (
-//     <div className="search">
-//       <h2>this is the Search Component</h2>
-//       <h3> THIS IS NOT SHOWING </h3>
-//       <ul>
-//       <li>{myDatabase}</li><br />
-//       <li>{myFlights}</li> <br />
-//       <SearchBox searchChange={onSearchChange}/>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default SearchFlight;

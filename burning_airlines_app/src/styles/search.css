@@ -21,22 +21,26 @@
 
 h1 {
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
-.search-button {
-  width: 300px;
-  padding: 7px 124px;
+.booking-button {
+  display: inline;
+  height: 30px;
+  width: 130px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 20px;
   border-radius: 5px;
   background: darkmagenta;
   border: 1px solid white;
   color: white;
   text-decoration: none;
+  text-align: center;
   -moz-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
   -webkit-box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
   box-shadow: 4px 4px 8px 0px rgb(0, 0, 0, 0.5);
 }
-.search-button:hover {
+.booking-button:hover {
   background: rgb(255, 111, 0);
   box-shadow: none;
 }
