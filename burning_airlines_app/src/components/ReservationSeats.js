@@ -6,8 +6,14 @@ export default class ReservationSeats extends React.Component {
         this.state = {
             flightId: this.props.flight_id,
             thisSeats: [],
-            thisFlight: []
+            thisFlight: [],
         }
+    }
+    
+    clickHandler = () => {
+        console.log("Clicked")
+        // children.push()
+        return <td>"Book"</td>
     }
 
     createTable = () => {
@@ -20,7 +26,7 @@ export default class ReservationSeats extends React.Component {
         let children = []
         //Inner loop to create children
         for (let j = 0; j < numOfRows; j++) {
-            children.push(<td><button className="seat-button">{`${j + 1}`}</button></td>)
+            children.push(<td><button className="seat-button" onClick={this.clickHandler} data-toggle="modal" data-target="#exampleModal">{`${j + 1}`}</button></td>)
         }
         //Create the parent and add the children
         table.push(<tr>{children}</tr>)
@@ -28,6 +34,7 @@ export default class ReservationSeats extends React.Component {
         return table
     }
 
+    
   render() {
     return(
         <div>

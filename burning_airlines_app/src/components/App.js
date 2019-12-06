@@ -7,6 +7,7 @@ import FlightIdPage from "../pages/FlightIdPage";
 import ReservationPage from "../pages/ReservationPage";
 import SearchFlight from "../pages/SearchFlight";
 import PlaneLayout from "../pages/PlaneLayout";
+import MakeBooking from "../pages/MakeBooking";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // this.props.flightID
@@ -24,6 +25,7 @@ function App() {
           <Route path="/flights/:flightId/reservation" exact component={ReservationPage} />
           <Route path="/search" component={SearchFlight} />
           <Route path="/planeLayout" component={PlaneLayout} />
+          <Route path="/makeBooking" component={MakeBooking} />
         </Switch>
       </div>
     </Router>
